@@ -160,6 +160,7 @@ export const postEdit = async (req, res) => {
     body: { name, email, username, location },
     file,
   } = req;
+  const isHeroku = process.env.NODE_ENV === "production";
   const existEmail = await User.exists({ username });
   const existUsername = await User.exists({ email });
   if (existUsername && req.session.user.username !== username) {
@@ -176,7 +177,7 @@ export const postEdit = async (req, res) => {
     const updateUser = await User.findByIdAndUpdate(
       _id,
       {
-        avatarUrl: file ? file.location : avatarUrl,
+        avatarUrl: file ? (isHeroku ? file.location : file.path) : avatarUrl,
         name,
         email,
         username,
