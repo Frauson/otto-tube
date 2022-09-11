@@ -51,14 +51,15 @@ export const publicOnlyMiddleware = (req, res, next) => {
 export const avatarUpload = multer({
   dest: "uploads/avatars/",
   limits: {
-    fileSize: 3000000,
+    fileSize: 5000000,
   },
-  storage: s3ImageUploader,
+  storage: isHeroku ? s3ImageUploader : undefined,
 });
+
 export const videoUpload = multer({
   dest: "uploads/videos/",
   limits: {
-    fileSize: 10000000,
+    fileSize: 50000000,
   },
-  storage: s3VideoUploader,
+  storage: isHeroku ? s3VideoUploader : undefined,
 });
