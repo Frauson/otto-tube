@@ -9,8 +9,7 @@ form {
 
 //what the bg-color above//
 
-input:not(input[type="range"]),
-input[type="submit"] {
+input:not(input[type="range"]) {
   all: unset;
   padding: 10px 20px;
   border-radius: 10px;
@@ -23,10 +22,6 @@ input[type="submit"] {
   &::placeholder {
     color: #63738d;
   }
-}
-
-input[type="file"] {
-  padding: 8px 20px;
 }
 
 .social__btn {
