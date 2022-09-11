@@ -59,10 +59,16 @@
   margin: 0 auto;
   margin-top: 20px;
   .video__comment {
+    position: relative;
     padding: 10px;
     border-radius: 150px;
     background-color: whitesmoke;
     color: rgb(0, 0, 0, 0.8);
     margin-bottom: 10px;
   }
+}
+
+#delete__comment {
+  position: absolute;
+  right: 10px;
 }
