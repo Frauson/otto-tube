@@ -1,6 +1,8 @@
 .empty.message {
   margin-bottom: 10px;
   font-size: 20px;
+  background-color: tomato;
+  color: white;
 }
 
 .video-grid {
@@ -14,9 +16,8 @@
 .auth-switch {
   text-align: center;
   margin-top: 40px;
-  a {
-    text-decoration: underline;
-  }
+  color: whitesmoke;
+  opacity: 0.8;
 }
 
 .avatar {
