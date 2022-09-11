@@ -15,13 +15,11 @@ const isHeroku = process.env.NODE_ENV === "production";
 const s3ImageUploader = multerS3({
   s3: s3,
   bucket: "otto-tube",
-  acl: "public-read",
 });
 
 const s3VideoUploader = multerS3({
   s3: s3,
   bucket: "otto-tube",
-  acl: "public-read",
 });
 
 export const localsMiddleware = (req, res, next) => {
